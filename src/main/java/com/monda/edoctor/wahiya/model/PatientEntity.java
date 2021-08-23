@@ -47,5 +47,6 @@ public class PatientEntity {
     @Column(name="is_active")
     private Boolean isActive;
 
+    @Column(name="image_url")
     private String imageUrl;
 }

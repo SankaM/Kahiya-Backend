@@ -1,4 +1,4 @@
-CREATE TABLE wahiya.doctor (
+CREATE TABLE kahiya.doctor (
  doctor_id uuid primary key,
  name varchar(50),
  user_name varchar(20),

@@ -1,4 +1,4 @@
-CREATE TABLE wahiya.patient (
+CREATE TABLE kahiya.patient (
  patient_id uuid,
  name varchar(50),
  age int,
