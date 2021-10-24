@@ -59,9 +59,6 @@ public class DoctorEntity {
     @Column(name = "user_name", unique = true)
     private String userName;
 
-    @Column(name = "password")
-    private String password;
-
     @Column(name = "is_active")
     private Boolean isActive = true;
 
