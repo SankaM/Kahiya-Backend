@@ -3,5 +3,5 @@ create table kahiya.taken_medicine (
     dosage_id uuid,
     taken_status varchar(255),
     scheduled_taken_date timestamp,
-    taken_status_date timestamp,
+    taken_status_date timestamp
 );
