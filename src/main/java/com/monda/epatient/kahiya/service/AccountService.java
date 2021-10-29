@@ -1,6 +1,8 @@
 package com.monda.epatient.kahiya.service;
 
 import com.monda.epatient.kahiya.dto.req.LoginReq;
+import com.monda.epatient.kahiya.dto.req.SignUpReq;
+import com.monda.epatient.kahiya.exception.DuplicateContentException;
 import com.monda.epatient.kahiya.exception.LoginException;
 import com.monda.epatient.kahiya.model.PatientEntity;
 import com.monda.epatient.kahiya.repository.PatientRepository;
@@ -26,5 +28,24 @@ public class AccountService {
 
         log.debug("Password does not matched :" + patientEntity.getUserName());
         throw new LoginException();
+    }
+
+    public PatientEntity signUp(SignUpReq req) throws DuplicateContentException {
+        if(patientRepository.findByEmail(req.getEmail()).isPresent()) {
+            throw new DuplicateContentException("There is already a patient with email " + req.getEmail());
+        }
+
+        if(patientRepository.findByUserName(req.getUserName()).isPresent()) {
+            throw new DuplicateContentException("There is already a patient with username " + req.getUserName());
+        }
+
+        PatientEntity patientEntity = PatientEntity.builder()
+                .userName(req.getUserName())
+                .email(req.getEmail())
+                .password(passwordEncoder.encode(req.getPassword()))
+                .build();
+        patientEntity = patientRepository.save(patientEntity);
+
+        return patientEntity;
     }
 }
