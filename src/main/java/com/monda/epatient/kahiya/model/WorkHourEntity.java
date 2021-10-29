@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.time.DayOfWeek;
 import java.util.UUID;
 
-@Table(name = "work_hour", schema = "wahiya")
+@Table(name = "work_hour", schema = "kahiya")
 @Entity
 @Setter
 @Getter

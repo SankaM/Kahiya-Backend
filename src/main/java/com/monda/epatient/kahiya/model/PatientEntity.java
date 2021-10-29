@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.UUID;
 
-@Table(name = "patient", schema = "wahiya")
+@Table(name = "patient", schema = "kahiya")
 @Entity
 @Setter
 @Getter

@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.UUID;
 
-@Table(name = "dosage", schema = "wahiya")
+@Table(name = "dosage", schema = "kahiya")
 @Entity
 @Setter
 @Getter

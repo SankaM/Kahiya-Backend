@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
-@Table(name = "prescription", schema = "wahiya")
+@Table(name = "prescription", schema = "kahiya")
 @Entity
 @Setter
 @Getter
