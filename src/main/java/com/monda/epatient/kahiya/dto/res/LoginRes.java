@@ -13,7 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class LoginRes {
-    private UUID doctorId;
+    private UUID patientId;
 
     private String firstName;
 
@@ -28,9 +28,10 @@ public class LoginRes {
 
         if (p != null) {
             res = new LoginRes();
-            res.doctorId = p.getId();
+            res.patientId = p.getId();
             res.firstName = p.getFirstName();
             res.lastName = p.getLastName();
+            res.userName = p.getUserName();
             res.imageUrl = p.getImageUrl();
         }
 

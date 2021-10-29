@@ -77,9 +77,8 @@ com/monda/epatient/kahiya/model/DoctorEntity.java
 com/monda/epatient/kahiya/model/DiagnosisEntity.java
  com.monda.epatient.kahiya.model.DiagnosisEntity
  com.monda.epatient.kahiya.model.DiagnosisEntity$DiagnosisEntityBuilder
-com/monda/epatient/kahiya/dto/res/LoginRes.java
- com.monda.epatient.kahiya.dto.res.LoginRes
- com.monda.epatient.kahiya.dto.res.LoginRes$LoginResBuilder
+com/monda/epatient/kahiya/service/AccountService.java
+ com.monda.epatient.kahiya.service.AccountService
 com/monda/epatient/kahiya/model/AppointmentEntity.java
  com.monda.epatient.kahiya.model.AppointmentEntity
  com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentEntityBuilder
@@ -104,5 +103,6 @@ com/monda/epatient/kahiya/exception/LoginException.java
  com.monda.epatient.kahiya.exception.LoginException
 com/monda/epatient/kahiya/controller/AccountController.java
  com.monda.epatient.kahiya.controller.AccountController
-com/monda/epatient/kahiya/service/AccountService.java
- com.monda.epatient.kahiya.service.AccountService
+com/monda/epatient/kahiya/dto/res/LoginRes.java
+ com.monda.epatient.kahiya.dto.res.LoginRes
+ com.monda.epatient.kahiya.dto.res.LoginRes$LoginResBuilder
