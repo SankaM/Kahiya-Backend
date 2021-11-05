@@ -3,7 +3,6 @@ package com.monda.epatient.kahiya.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.UUID;
 
 @Table(name = "doctor", schema = "kahiya")
@@ -64,8 +63,4 @@ public class DoctorEntity {
 
     @Column(name = "doctor_cost")
     private Double doctorCost;
-
-    @OneToMany
-    @JoinColumn(name = "doctor_id")
-    private List<WorkHourEntity> workHourList;
 }
