@@ -56,9 +56,9 @@ public class DoctorController {
         return new ResponseWrapper(true, null, doctorService.getWorkHours(doctorId));
     }
 
-    @GetMapping(value = "/doctors/{doctorId}/statistics")
+    @GetMapping(value = "/doctors/{doctorId}/statistic")
     @ResponseStatus(code = HttpStatus.OK)
-    public ResponseWrapper<DoctorStatisticRes> getStatistics(@PathVariable("doctorId") UUID doctorId) throws NotFoundException {
-        return new ResponseWrapper(true, null, doctorService.getStatisticsRes(doctorId));
+    public ResponseWrapper<DoctorStatisticRes> getStatistic(@PathVariable("doctorId") UUID doctorId) throws NotFoundException {
+        return new ResponseWrapper(true, null, doctorService.getStatistic(doctorId));
     }
 }

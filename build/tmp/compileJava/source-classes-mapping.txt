@@ -112,11 +112,11 @@ com/monda/epatient/kahiya/dto/res/LoginRes.java
 com/monda/epatient/kahiya/dto/res/DoctorStatisticRes.java
  com.monda.epatient.kahiya.dto.res.DoctorStatisticRes
  com.monda.epatient.kahiya.dto.res.DoctorStatisticRes$DoctorStatisticResBuilder
-com/monda/epatient/kahiya/controller/DoctorController.java
- com.monda.epatient.kahiya.controller.DoctorController
+com/monda/epatient/kahiya/repository/PrescriptionRepository.java
+ com.monda.epatient.kahiya.repository.PrescriptionRepository
 com/monda/epatient/kahiya/service/DoctorService.java
  com.monda.epatient.kahiya.service.DoctorService
  com.monda.epatient.kahiya.service.DoctorService$1
  com.monda.epatient.kahiya.service.DoctorService$SearchDoctorField
-com/monda/epatient/kahiya/repository/PrescriptionRepository.java
- com.monda.epatient.kahiya.repository.PrescriptionRepository
+com/monda/epatient/kahiya/controller/DoctorController.java
+ com.monda.epatient.kahiya.controller.DoctorController

@@ -87,7 +87,7 @@ public class DoctorService {
                 .collect(Collectors.toList());
     }
 
-    public DoctorStatisticRes getStatisticsRes(UUID doctorId) throws NotFoundException {
+    public DoctorStatisticRes getStatistic(UUID doctorId) throws NotFoundException {
         existsById(doctorId);
 
         int totalDiagnostic = prescriptionRepository.countDiagnosticByDoctorId(doctorId);
