@@ -31,16 +31,20 @@ com/monda/epatient/kahiya/repository/AppointmentRepository.java
  com.monda.epatient.kahiya.repository.AppointmentRepository
 com/monda/epatient/kahiya/controller/PrescriptionController.java
  com.monda.epatient.kahiya.controller.PrescriptionController
-com/monda/epatient/kahiya/controller/AppointmentController.java
- com.monda.epatient.kahiya.controller.AppointmentController
+com/monda/epatient/kahiya/model/AppointmentEntity.java
+ com.monda.epatient.kahiya.model.AppointmentEntity
+ com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentEntityBuilder
+ com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentStatus
 com/monda/epatient/kahiya/repository/DrugRepository.java
  com.monda.epatient.kahiya.repository.DrugRepository
 com/monda/epatient/kahiya/Config.java
  com.monda.epatient.kahiya.Config
 com/monda/epatient/kahiya/repository/DosageRepository.java
  com.monda.epatient.kahiya.repository.DosageRepository
-com/monda/epatient/kahiya/service/AppointmentService.java
- com.monda.epatient.kahiya.service.AppointmentService
+com/monda/epatient/kahiya/service/DoctorService.java
+ com.monda.epatient.kahiya.service.DoctorService
+ com.monda.epatient.kahiya.service.DoctorService$1
+ com.monda.epatient.kahiya.service.DoctorService$SearchDoctorField
 com/monda/epatient/kahiya/model/DrugEntity.java
  com.monda.epatient.kahiya.model.DrugEntity
  com.monda.epatient.kahiya.model.DrugEntity$DrugEntityBuilder
@@ -80,10 +84,8 @@ com/monda/epatient/kahiya/model/DoctorEntity.java
  com.monda.epatient.kahiya.model.DoctorEntity$DoctorEntityBuilder
 com/monda/epatient/kahiya/repository/WorkHourRepository.java
  com.monda.epatient.kahiya.repository.WorkHourRepository
-com/monda/epatient/kahiya/model/AppointmentEntity.java
- com.monda.epatient.kahiya.model.AppointmentEntity
- com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentEntityBuilder
- com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentStatus
+com/monda/epatient/kahiya/controller/DoctorController.java
+ com.monda.epatient.kahiya.controller.DoctorController
 com/monda/epatient/kahiya/model/WorkHourEntity.java
  com.monda.epatient.kahiya.model.WorkHourEntity
  com.monda.epatient.kahiya.model.WorkHourEntity$WorkHourEntityBuilder
@@ -114,9 +116,13 @@ com/monda/epatient/kahiya/dto/res/DoctorStatisticRes.java
  com.monda.epatient.kahiya.dto.res.DoctorStatisticRes$DoctorStatisticResBuilder
 com/monda/epatient/kahiya/repository/PrescriptionRepository.java
  com.monda.epatient.kahiya.repository.PrescriptionRepository
-com/monda/epatient/kahiya/service/DoctorService.java
- com.monda.epatient.kahiya.service.DoctorService
- com.monda.epatient.kahiya.service.DoctorService$1
- com.monda.epatient.kahiya.service.DoctorService$SearchDoctorField
-com/monda/epatient/kahiya/controller/DoctorController.java
- com.monda.epatient.kahiya.controller.DoctorController
+com/monda/epatient/kahiya/dto/req/MakeAppointmentReq.java
+ com.monda.epatient.kahiya.dto.req.MakeAppointmentReq
+ com.monda.epatient.kahiya.dto.req.MakeAppointmentReq$MakeAppointmentReqBuilder
+com/monda/epatient/kahiya/service/AppointmentService.java
+ com.monda.epatient.kahiya.service.AppointmentService
+com/monda/epatient/kahiya/dto/res/AppointmentRes.java
+ com.monda.epatient.kahiya.dto.res.AppointmentRes
+ com.monda.epatient.kahiya.dto.res.AppointmentRes$AppointmentResBuilder
+com/monda/epatient/kahiya/controller/AppointmentController.java
+ com.monda.epatient.kahiya.controller.AppointmentController

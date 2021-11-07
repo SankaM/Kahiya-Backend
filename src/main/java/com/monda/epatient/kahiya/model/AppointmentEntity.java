@@ -3,6 +3,7 @@ package com.monda.epatient.kahiya.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -40,7 +41,7 @@ public class AppointmentEntity {
     private PrescriptionEntity prescription;
 
     @Column(name = "appointment_date")
-    private LocalDateTime appointmentDate;
+    private LocalDate appointmentDate;
 
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
