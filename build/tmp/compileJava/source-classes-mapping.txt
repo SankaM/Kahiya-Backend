@@ -30,8 +30,9 @@ com/monda/epatient/kahiya/model/DrugEntity.java
  com.monda.epatient.kahiya.model.DrugEntity$DrugEntityBuilder
  com.monda.epatient.kahiya.model.DrugEntity$DrugType
  com.monda.epatient.kahiya.model.DrugEntity$MeasurementUnit
-com/monda/epatient/kahiya/service/PatientService.java
- com.monda.epatient.kahiya.service.PatientService
+com/monda/epatient/kahiya/dto/res/AppointmentRes.java
+ com.monda.epatient.kahiya.dto.res.AppointmentRes
+ com.monda.epatient.kahiya.dto.res.AppointmentRes$AppointmentResBuilder
 com/monda/epatient/kahiya/dto/res/DoctorRes.java
  com.monda.epatient.kahiya.dto.res.DoctorRes
  com.monda.epatient.kahiya.dto.res.DoctorRes$DoctorResBuilder
@@ -42,12 +43,14 @@ com/monda/epatient/kahiya/repository/TakenMedicineRepository.java
 com/monda/epatient/kahiya/dto/req/LoginReq.java
  com.monda.epatient.kahiya.dto.req.LoginReq
  com.monda.epatient.kahiya.dto.req.LoginReq$LoginReqBuilder
-com/monda/epatient/kahiya/service/PrescriptionService.java
- com.monda.epatient.kahiya.service.PrescriptionService
+com/monda/epatient/kahiya/controller/AppointmentController.java
+ com.monda.epatient.kahiya.controller.AppointmentController
 com/monda/epatient/kahiya/exception/NoContentException.java
  com.monda.epatient.kahiya.exception.NoContentException
-com/monda/epatient/kahiya/repository/PrescriptionRepository.java
- com.monda.epatient.kahiya.repository.PrescriptionRepository
+com/monda/epatient/kahiya/model/AppointmentEntity.java
+ com.monda.epatient.kahiya.model.AppointmentEntity
+ com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentEntityBuilder
+ com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentStatus
 com/monda/epatient/kahiya/Application.java
  com.monda.epatient.kahiya.Application
 com/monda/epatient/kahiya/model/PatientEntity.java
@@ -111,20 +114,32 @@ com/monda/epatient/kahiya/exception/DuplicateContentException.java
 com/monda/epatient/kahiya/dto/res/WorkHourRes.java
  com.monda.epatient.kahiya.dto.res.WorkHourRes
  com.monda.epatient.kahiya.dto.res.WorkHourRes$WorkHourResBuilder
+com/monda/epatient/kahiya/dto/res/PatientRes.java
+ com.monda.epatient.kahiya.dto.res.PatientRes
+ com.monda.epatient.kahiya.dto.res.PatientRes$PatientResBuilder
+com/monda/epatient/kahiya/dto/res/DosageRes.java
+ com.monda.epatient.kahiya.dto.res.DosageRes
+ com.monda.epatient.kahiya.dto.res.DosageRes$DosageResBuilder
+com/monda/epatient/kahiya/dto/res/PrescriptionRes.java
+ com.monda.epatient.kahiya.dto.res.PrescriptionRes
+ com.monda.epatient.kahiya.dto.res.PrescriptionRes$PrescriptionResBuilder
+com/monda/epatient/kahiya/service/PrescriptionService.java
+ com.monda.epatient.kahiya.service.PrescriptionService
+com/monda/epatient/kahiya/dto/res/DiagnosisRes.java
+ com.monda.epatient.kahiya.dto.res.DiagnosisRes
+ com.monda.epatient.kahiya.dto.res.DiagnosisRes$DiagnosisResBuilder
+com/monda/epatient/kahiya/dto/res/DrugRes.java
+ com.monda.epatient.kahiya.dto.res.DrugRes
+ com.monda.epatient.kahiya.dto.res.DrugRes$DrugResBuilder
 com/monda/epatient/kahiya/service/DoctorService.java
  com.monda.epatient.kahiya.service.DoctorService
  com.monda.epatient.kahiya.service.DoctorService$1
  com.monda.epatient.kahiya.service.DoctorService$SearchDoctorField
-com/monda/epatient/kahiya/model/AppointmentEntity.java
- com.monda.epatient.kahiya.model.AppointmentEntity
- com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentEntityBuilder
- com.monda.epatient.kahiya.model.AppointmentEntity$AppointmentStatus
-com/monda/epatient/kahiya/dto/res/AppointmentRes.java
- com.monda.epatient.kahiya.dto.res.AppointmentRes
- com.monda.epatient.kahiya.dto.res.AppointmentRes$AppointmentResBuilder
+com/monda/epatient/kahiya/repository/PrescriptionRepository.java
+ com.monda.epatient.kahiya.repository.PrescriptionRepository
 com/monda/epatient/kahiya/service/AppointmentService.java
  com.monda.epatient.kahiya.service.AppointmentService
 com/monda/epatient/kahiya/controller/PatientController.java
  com.monda.epatient.kahiya.controller.PatientController
-com/monda/epatient/kahiya/controller/AppointmentController.java
- com.monda.epatient.kahiya.controller.AppointmentController
+com/monda/epatient/kahiya/service/PatientService.java
+ com.monda.epatient.kahiya.service.PatientService

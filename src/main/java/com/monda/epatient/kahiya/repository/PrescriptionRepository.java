@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Repository
@@ -14,4 +16,10 @@ public interface PrescriptionRepository extends JpaRepository<PrescriptionEntity
 
     @Query("SELECT count(p) FROM PrescriptionEntity p WHERE p.doctor.id = :doctorId AND size(p.dosageList) > 0")
     int countPrescriptionWithDosageByDoctorId(UUID doctorId);
+
+    @Query("select p from PrescriptionEntity p where p.patient.id = :patientId and p.lastTreatmentDate < :currentDate ")
+    List<PrescriptionEntity> findExpiredPrescription(UUID patientId, LocalDateTime currentDate);
+
+    @Query("select p from PrescriptionEntity p where p.patient.id = :patientId and p.lastTreatmentDate >= :currentDate ")
+    List<PrescriptionEntity> findNotExpiredPrescription(UUID patientId, LocalDateTime currentDate);
 }
