@@ -16,7 +16,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class AppointmentEntity {
     public enum AppointmentStatus {
-        REQUESTED, ACCEPTED, DECLINED, PRESCRIBED
+        REQUESTED, ACCEPTED, DECLINED, PRESCRIBED, CANCELLED
     }
 
     @Id
@@ -41,7 +41,7 @@ public class AppointmentEntity {
     private PrescriptionEntity prescription;
 
     @Column(name = "appointment_date")
-    private LocalDate appointmentDate;
+    private LocalDateTime appointmentDate;
 
     @Column(name = "status")
     @Enumerated(EnumType.STRING)

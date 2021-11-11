@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.monda.epatient.kahiya.model.WorkHourEntity;
 import lombok.*;
 
+import java.time.LocalTime;
 import java.util.UUID;
 
 @Setter
@@ -17,7 +18,9 @@ public class WorkHourRes {
 
     private String dayOfWeek;
 
-    private String time;
+    private LocalTime startTime;
+
+    private LocalTime endTime;
 
     public static WorkHourRes build(WorkHourEntity w) {
         WorkHourRes res = null;
@@ -27,7 +30,8 @@ public class WorkHourRes {
 
             res.id = w.getId();
             res.dayOfWeek = w.getDayOfWeek().name();
-            res.time = w.getTime();
+            res.startTime = w.getStartTime();
+            res.endTime = w.getEndTime();
         }
 
         return res;
