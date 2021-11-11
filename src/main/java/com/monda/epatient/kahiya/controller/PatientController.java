@@ -36,10 +36,9 @@ public class PatientController {
 
     @PutMapping(value = "/patient/{patientId}/appointment/{appointmentId}")
     @ResponseStatus(code = HttpStatus.OK)
-    public ResponseWrapper updateAppointment(@PathVariable("patientId") UUID patientId,
+    public ResponseWrapper<AppointmentRes> updateAppointment(@PathVariable("patientId") UUID patientId,
                                              @PathVariable("appointmentId") UUID appointmentId,
                                              @RequestBody UpdateAppointmentStatusReq req) throws NotFoundException, WrongParameterException {
-        appointmentService.updateAppointmentStatus(patientId, appointmentId, req);
-        return new ResponseWrapper<>(true, null, null);
+        return new ResponseWrapper<>(true, null, appointmentService.updateAppointmentStatus(patientId, appointmentId, req));
     }
 }

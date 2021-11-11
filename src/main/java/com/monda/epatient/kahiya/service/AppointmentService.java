@@ -45,6 +45,7 @@ public class AppointmentService {
                 .patient(patientRepository.getOne(req.getPatientId()))
                 .workHour(workHourRepository.getOne(req.getWorkHourId()))
                 .appointmentDate(LocalDateTime.parse(req.getAppointmentDate()))
+                .status(AppointmentEntity.AppointmentStatus.REQUESTED)
                 .build();
 
         appointment = appointmentRepository.save(appointment);
@@ -74,7 +75,7 @@ public class AppointmentService {
                 .collect(Collectors.toList());
     }
 
-    public void updateAppointmentStatus(UUID patientId, UUID appointmentId, UpdateAppointmentStatusReq req) throws NotFoundException, WrongParameterException {
+    public AppointmentRes updateAppointmentStatus(UUID patientId, UUID appointmentId, UpdateAppointmentStatusReq req) throws NotFoundException, WrongParameterException {
         patientService.existsById(patientId);
         var appointmentOpt = appointmentRepository.findByPatientIdAndAppointmentId(patientId, appointmentId);
 
@@ -84,6 +85,8 @@ public class AppointmentService {
 
         var appointment = appointmentOpt.get();
         appointment.setStatus(req.getAppointmentStatus());
-        appointmentRepository.save(appointment);
+        var updatedAppointment = appointmentRepository.save(appointment);
+
+        return AppointmentRes.build(updatedAppointment);
     }
 }
