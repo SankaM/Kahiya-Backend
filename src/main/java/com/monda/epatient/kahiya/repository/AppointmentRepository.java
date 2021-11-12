@@ -15,7 +15,7 @@ public interface AppointmentRepository extends JpaRepository<AppointmentEntity, 
     @Query("select a from AppointmentEntity a where a.patient.id = :patientId and a.appointmentDate < :beforeDate order by a.appointmentDate desc")
     List<AppointmentEntity> findBeforeDate(UUID patientId, LocalDateTime beforeDate);
 
-    @Query("select a from AppointmentEntity a where a.patient.id = :patientId and a.appointmentDate >= :afterDate")
+    @Query("select a from AppointmentEntity a where a.patient.id = :patientId and a.appointmentDate >= :afterDate order by a.appointmentDate asc")
     List<AppointmentEntity> findAfterDate(UUID patientId, LocalDateTime afterDate);
 
     @Query("select a from AppointmentEntity a where a.patient.id = :patientId and a.id = :appointmentId")

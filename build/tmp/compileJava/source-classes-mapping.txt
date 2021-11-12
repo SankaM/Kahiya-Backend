@@ -43,8 +43,8 @@ com/monda/epatient/kahiya/repository/TakenMedicineRepository.java
 com/monda/epatient/kahiya/dto/req/LoginReq.java
  com.monda.epatient.kahiya.dto.req.LoginReq
  com.monda.epatient.kahiya.dto.req.LoginReq$LoginReqBuilder
-com/monda/epatient/kahiya/controller/AppointmentController.java
- com.monda.epatient.kahiya.controller.AppointmentController
+com/monda/epatient/kahiya/service/PatientService.java
+ com.monda.epatient.kahiya.service.PatientService
 com/monda/epatient/kahiya/exception/NoContentException.java
  com.monda.epatient.kahiya.exception.NoContentException
 com/monda/epatient/kahiya/model/AppointmentEntity.java
@@ -141,5 +141,5 @@ com/monda/epatient/kahiya/service/AppointmentService.java
  com.monda.epatient.kahiya.service.AppointmentService
 com/monda/epatient/kahiya/controller/PatientController.java
  com.monda.epatient.kahiya.controller.PatientController
-com/monda/epatient/kahiya/service/PatientService.java
- com.monda.epatient.kahiya.service.PatientService
+com/monda/epatient/kahiya/controller/AppointmentController.java
+ com.monda.epatient.kahiya.controller.AppointmentController

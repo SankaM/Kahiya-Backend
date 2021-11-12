@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -77,15 +78,15 @@ public class AppointmentService {
 
     public AppointmentRes updateAppointmentStatus(UUID patientId, UUID appointmentId, UpdateAppointmentStatusReq req) throws NotFoundException, WrongParameterException {
         patientService.existsById(patientId);
-        var appointmentOpt = appointmentRepository.findByPatientIdAndAppointmentId(patientId, appointmentId);
+        Optional<AppointmentEntity> appointmentOpt = appointmentRepository.findByPatientIdAndAppointmentId(patientId, appointmentId);
 
         if(!appointmentOpt.isPresent()) {
             throw new NotFoundException("No Appointment for specified doctor");
         }
 
-        var appointment = appointmentOpt.get();
+        AppointmentEntity appointment = appointmentOpt.get();
         appointment.setStatus(req.getAppointmentStatus());
-        var updatedAppointment = appointmentRepository.save(appointment);
+        AppointmentEntity updatedAppointment = appointmentRepository.save(appointment);
 
         return AppointmentRes.build(updatedAppointment);
     }
