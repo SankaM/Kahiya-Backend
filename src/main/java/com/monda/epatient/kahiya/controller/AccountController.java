@@ -30,7 +30,7 @@ public class AccountController {
 
     @PostMapping(value = "/patient/signup")
     @ResponseStatus(code = HttpStatus.OK)
-    public ResponseWrapper<LoginRes> login(@RequestBody SignUpReq req) throws DuplicateContentException {
+    public ResponseWrapper<LoginRes> signup(@RequestBody SignUpReq req) throws DuplicateContentException {
         PatientEntity patientEntity = accountService.signUp(req);
         return new ResponseWrapper<>(true, null, LoginRes.buildDetail(patientEntity));
     }

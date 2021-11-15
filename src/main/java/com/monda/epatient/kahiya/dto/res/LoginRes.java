@@ -23,6 +23,10 @@ public class LoginRes {
 
     private String imageUrl;
 
+    private String email;
+
+    private String mobilePhone;
+
     public static LoginRes buildDetail(PatientEntity p) {
         LoginRes res = null;
 
@@ -33,6 +37,8 @@ public class LoginRes {
             res.lastName = p.getLastName();
             res.userName = p.getUserName();
             res.imageUrl = p.getImageUrl();
+            res.email = p.getEmail();
+            res.mobilePhone = p.getMobilePhone();
         }
 
         return res;
