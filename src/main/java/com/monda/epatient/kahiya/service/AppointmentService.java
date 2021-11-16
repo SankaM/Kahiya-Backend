@@ -10,6 +10,7 @@ import com.monda.epatient.kahiya.model.*;
 import com.monda.epatient.kahiya.repository.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -51,6 +52,7 @@ public class AppointmentService {
                 .workHour(workHour)
                 .appointmentDate(LocalDateTime.parse(req.getAppointmentDate()))
                 .status(AppointmentEntity.AppointmentStatus.REQUESTED)
+                .updatedDate(LocalDateTime.now())
                 .build();
 
         appointment = appointmentRepository.save(appointment);
@@ -99,8 +101,19 @@ public class AppointmentService {
 
         AppointmentEntity appointment = appointmentOpt.get();
         appointment.setStatus(req.getAppointmentStatus());
+        appointment.setUpdatedDate(LocalDateTime.now());
         AppointmentEntity updatedAppointment = appointmentRepository.save(appointment);
 
         return AppointmentRes.build(updatedAppointment);
+    }
+
+    public List<AppointmentRes> findAllAppointment(UUID patientId) throws NotFoundException {
+        patientService.existsById(patientId);
+
+        return appointmentRepository
+                .findAll(Sort.by(Sort.Direction.ASC, "updatedDate"))
+                .stream()
+                .map(appointment -> AppointmentRes.build(appointment))
+                .collect(Collectors.toList());
     }
 }

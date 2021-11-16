@@ -24,6 +24,8 @@ public class AppointmentRes {
 
     private String appointmentDate;
 
+    private String updatedDate;
+
     private AppointmentEntity.AppointmentStatus status;
 
     public static AppointmentRes build(AppointmentEntity appointment) {
@@ -35,6 +37,7 @@ public class AppointmentRes {
             res.doctor = DoctorRes.buildSimple(appointment.getDoctor());
             res.workHour = WorkHourRes.build(appointment.getWorkHour());
             res.appointmentDate = appointment.getAppointmentDate() != null ? appointment.getAppointmentDate().toString() : null;
+            res.updatedDate = appointment.getUpdatedDate() != null ? appointment.getUpdatedDate().toString() : null;
             res.status = appointment.getStatus();
         }
 
