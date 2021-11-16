@@ -36,10 +36,10 @@ public class PatientController {
         return new ResponseWrapper<>(true, null, appointmentService.retrieveFutureAppointment(patientId));
     }
 
-    @GetMapping(value = "/patient/{patientId}/appointment/all")
+    @GetMapping(value = "/patient/{patientId}/appointment/status/accepted")
     @ResponseStatus(code = HttpStatus.OK)
     public ResponseWrapper<List<AppointmentRes>> getAllAppointment(@PathVariable("patientId") UUID patientId) throws NotFoundException {
-        return new ResponseWrapper<>(true, null, appointmentService.findAllAppointment(patientId));
+        return new ResponseWrapper<>(true, null, appointmentService.findAllAcceptedAppointment(patientId));
     }
 
     @PutMapping(value = "/patient/{patientId}/appointment/{appointmentId}")

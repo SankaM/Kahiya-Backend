@@ -10,7 +10,6 @@ import com.monda.epatient.kahiya.model.*;
 import com.monda.epatient.kahiya.repository.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -107,11 +106,11 @@ public class AppointmentService {
         return AppointmentRes.build(updatedAppointment);
     }
 
-    public List<AppointmentRes> findAllAppointment(UUID patientId) throws NotFoundException {
+    public List<AppointmentRes> findAllAcceptedAppointment(UUID patientId) throws NotFoundException {
         patientService.existsById(patientId);
 
         return appointmentRepository
-                .findAll(Sort.by(Sort.Direction.ASC, "updatedDate"))
+                .findAllAppointmentByStatus(patientId, AppointmentEntity.AppointmentStatus.ACCEPTED)
                 .stream()
                 .map(appointment -> AppointmentRes.build(appointment))
                 .collect(Collectors.toList());

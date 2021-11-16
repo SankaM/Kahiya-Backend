@@ -20,4 +20,7 @@ public interface AppointmentRepository extends JpaRepository<AppointmentEntity, 
 
     @Query("select a from AppointmentEntity a where a.patient.id = :patientId and a.id = :appointmentId")
     Optional<AppointmentEntity> findByPatientIdAndAppointmentId(UUID patientId, UUID appointmentId);
+
+    @Query("select a from AppointmentEntity a where a.patient.id = :patientId and a.status = :status order by a.appointmentDate desc")
+    List<AppointmentEntity> findAllAppointmentByStatus(UUID patientId, AppointmentEntity.AppointmentStatus status);
 }
