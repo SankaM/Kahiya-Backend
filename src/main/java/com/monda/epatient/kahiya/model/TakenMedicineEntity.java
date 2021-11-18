@@ -3,7 +3,7 @@ package com.monda.epatient.kahiya.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Table(name = "taken_medicine", schema = "kahiya")
@@ -15,7 +15,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class TakenMedicineEntity {
     public enum TakenStatus {
-        TAKEN, PASS
+        TAKEN, NOT_TAKEN,
     }
 
     @Id
@@ -32,8 +32,8 @@ public class TakenMedicineEntity {
     private TakenStatus takenStatus;
 
     @Column(name = "scheduled_taken_date")
-    private LocalDate scheduledTakenDate;
+    private LocalDateTime scheduledTakenDate;
 
     @Column(name = "taken_status_date")
-    private LocalDate takenStatusDate;
+    private LocalDateTime takenStatusDate;
 }
