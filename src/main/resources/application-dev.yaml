@@ -1,15 +1,22 @@
 server:
     port: 3005
+    error:
+      include-message: always
 spring:
   datasource:
-    #url: jdbc:h2:mem:testdb
-    url: jdbc:h2:file:./data/testdb
+    url: jdbc:h2:mem:testdb
+    #url: jdbc:h2:file:./data/testdb
     driverClassName: org.h2.Driver
     username: test
     password: test
+  servelet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     generate-ddl: false
+    show-sql: true
   h2:
     console:
       enabled: true

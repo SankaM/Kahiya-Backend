@@ -11,3 +11,5 @@ sudo docker run -d -e DATABASE_SERVER=jdbc:h2:mem:testdb -p 3005:3005 kahiya:0.0
 sudo docker container ps
 
 gradlew bootJar
+
+----
